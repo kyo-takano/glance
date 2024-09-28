@@ -1,0 +1,58 @@
+pages:
+  - name: Home
+    columns:
+      - size: small
+        widgets:
+          # - type: weather
+          #   location: Chiba, Japan
+          - type: markets
+            markets:
+              - symbol: JPY=X
+                name: USD/JPY
+              - symbol: EURJPY=X
+                name: EUR/JPY
+              - symbol: AMD
+                name: AMD
+              - symbol: TSM
+                name: TSMC
+          - type: html
+            source: |
+              <div class="widget-content">
+                <div>
+                  <a class="color-highlight size-h3 block text-truncate">Gold (10 Years)</a>
+                  <img src="https://goldprice.org/charts/gold_10_year_o_usd_x.png"></img>
+                </div>
+              </div>
+      - size: full
+        widgets:
+          - type: html
+            source: |
+              <div class="widget-header">
+                  <div class="uppercase">Prices</div>
+              </div>
+              <div class="widget-content">
+                <div style="display: flex; flex-direction: column; gap: 2rem;">
+                  <div>
+                    <h4>K6</h4>
+                    <img src=https://graph.keepa.com/pricehistory.png?asin=B096X89ZHV&domain=co.jp></img>
+                  </div>
+                  <div>
+                    <h4>Pro 2</h4>
+                    <img src=https://graph.keepa.com/pricehistory.png?asin=B0842H6HQH&domain=com></img>
+                  </div>
+                </div>
+              </div>
+      - size: small
+        widgets:
+          - type: reddit
+            subreddit: espresso
+          - type: repository
+            repository: kyo-takano/chinchilla
+            pull-requests-limit: 2
+            issues-limit: 2
+            commits-limit: 2
+          - type: repository
+            repository: kyo-takano/alphacube
+            pull-requests-limit: 2
+            issues-limit: 2
+            commits-limit: 2
